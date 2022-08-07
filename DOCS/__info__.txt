@@ -1,18 +1,5 @@
 This file will document the deployment method:
 
-Environment variables:
-POSTGRES_USERNAME=postgres
-POSTGRES_PASSWORD=postgres
-POSTGRES_DB=postgres
-POSTGRES_HOST=database-3.cp5kxhmqtpnn.us-east-1.rds.amazonaws.com
-PORT=8080
-AWS_REGION=us-east-1
-AWS_DEFAULT_REGION=us-east-1
-AWS_BUCKET=8349-7183-8128-bucket
-JWT_SECRET=top-secret
-AWS_ACCESS_KEY_ID=AKIA4E2BTE2YBLOWCO73
-AWS_SECRET_ACCESS_KEY=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
-
 links: 
 front-end: http://8349-7183-8128-bucket.s3-website-us-east-1.amazonaws.com
 back-end: http://udagram-env-4.eba-4e4fikfa.us-east-1.elasticbeanstalk.com 
