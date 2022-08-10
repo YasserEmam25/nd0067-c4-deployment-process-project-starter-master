@@ -3,3 +3,8 @@ This file will document the deployment method:
 links: 
 front-end: http://8349-7183-8128-bucket.s3-website-us-east-1.amazonaws.com
 back-end: http://udagram-env-4.eba-4e4fikfa.us-east-1.elasticbeanstalk.com 
+
+Pipline: 
+circle ci watchs the master branch in the project until it change, then 
+It install missing dependencies, build the project, test it, and then deploy 
+the project to aws.
