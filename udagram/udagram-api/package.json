@@ -14,8 +14,7 @@
     "clean": "rm -rf www/ || true",
     "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
     "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && bestzip Archive.zip . && cd ..",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "nodemon": "nodemon src/server.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
@@ -52,7 +51,6 @@
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
     "mocha": "^6.1.4",
-    "nodemon": "^2.0.19",
     "rm": "^0.1.8",
     "ts-node-dev": "^1.0.0-pre.32",
     "typescript": "^3.9.10",

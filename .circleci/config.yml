@@ -44,6 +44,16 @@ jobs:
           name: API Build
           command: |
             npm run api:build
+  # apply testing
+  test:
+    docker:
+      -image: "cimg/base:stable"
+    steps:
+      -run:
+        name: Front-End Testing
+        comaand: |
+          npm run frontend:test
+
   # deploy step will run only after manual approval
   deploy:
     docker:
@@ -60,6 +70,7 @@ jobs:
           # TODO: Install, build, deploy in both apps
           command: |
             npm run deploy
+            eb setenv POSTGRES_HOST=$POSTGRES_HOST DB_PORT=$DB_PORT POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_DB=$POSTGRES_DB JWT_SECRET=$JWT_SECRET PORT=$PORT
 workflows:
   udagram:
     jobs:
